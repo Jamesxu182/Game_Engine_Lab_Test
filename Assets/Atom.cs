@@ -33,6 +33,8 @@ public class Atom : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        printTitle();
+
         ParseElectronString();
 
         CreateShells();
@@ -104,5 +106,10 @@ public class Atom : MonoBehaviour {
         {
             electronsNumbers.Add(int.Parse(numbers[i]));
         }
+    }
+
+    private void printTitle()
+    {
+        transform.GetComponent<TextMesh>().text= atom + "\n" + electronsPerShell;
     }
 }
